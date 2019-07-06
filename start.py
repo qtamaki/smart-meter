@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # pip install pyserial
@@ -26,10 +26,10 @@ try:
   util.command("SKVER")
 
   # Bルート認証パスワード設定
-  util.command("SKSETPWD C " + rbpwd)
+  util.command("SKSETPWD C " + settings.RouteB.password)
 
   # Bルート認証ID設定
-  util.command("SKSETRBID " + rbid)
+  util.command("SKSETRBID " + settings.RouteB.account_id)
 
   # SKSCANを掛ける
   scanRes = util.scan()

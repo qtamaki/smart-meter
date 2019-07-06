@@ -13,7 +13,8 @@ class MySQLStoreUtil():
     # SSHトンネリングで接続する設定(直接接続するなら不要)
     self.server = SSHTunnelForwarder(
       (settings.SSHTunnnel.server_address, settings.SSHTunnnel.server_port),
-      ssh_host_key=settings.SSHTunnnel.ssh_host_key,
+      #ssh_host_key=settings.SSHTunnnel.ssh_host_key,
+      ssh_host_key=None,
       ssh_pkey=settings.SSHTunnnel.ssh_pkey,
       ssh_username=settings.SSHTunnnel.ssh_username,
       ssh_password=settings.SSHTunnnel.ssh_password,
