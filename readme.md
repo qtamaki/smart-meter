@@ -41,7 +41,7 @@ create table meter_logs (
   accum_watt double not null default 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-create index idx_meter_logs_1 meter_logs(created_at);
+create index idx_meter_logs_1 on meter_logs(created_at);
 ```
 
 ## 接続キーの準備
